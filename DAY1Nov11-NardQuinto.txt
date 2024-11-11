@@ -153,7 +153,7 @@ client-identifier ____.____.____
 !!cisco unified call manager Express command
 !@@@CUCM-M
 config t
-   hostname CUCM-_
+   hostname CUCM-52
    enable secret pass
    service password-encryption
    no logging console
@@ -168,22 +168,22 @@ config t
       exec-timeout 0 0
    Int Fa 0/0
      no shutdown
-	 ip add 10._.100.8 255.255.255.0 
+	 ip add 10.52.100.8 255.255.255.0 
 	 end
    
 !!!CUCM ANALOG PHONES CONFIG
 configure terminal
 dial-peer voice 1 pots
-   destination-pattern _00
+   destination-pattern 5200
    port 0/0/0
 dial-peer voice 2 pots
-   destination-pattern _01
+   destination-pattern 5201
    port 0/0/1
 dial-peer voice 3 pots
-   destination-pattern _02
+   destination-pattern 5202
    port 0/0/2
 dial-peer voice 4 pots
-   destination-pattern _03
+   destination-pattern 5203
    port 0/0/3
 end
 
